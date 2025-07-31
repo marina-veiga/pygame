@@ -11,7 +11,7 @@ O jogador pode escolher entre dois modos diferentes para se desafiar:
 
 A seguir, a tela inicial do jogo:
 
-![Tela Inicial](imagens/68cac648-a196-4bf3-9fa3-2cd48e83f22b.png)
+![Tela Inicial](imagens/tela_inicial.png)
 
 ---
 
