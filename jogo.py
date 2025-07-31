@@ -17,17 +17,17 @@ def jogo1():
     pygame.display.set_caption('Fallen Angels')
 
     # carregar imgagem de Fundo
-    imagem_de_fundo = pygame.image.load('fundoj1.1.jpg')
+    imagem_de_fundo = pygame.image.load('imagens/fundoj1.1.jpg')
     imagem_de_fundo = pygame.transform.smoothscale(imagem_de_fundo, tamanho_da_tela)
     fundo_x = 0  # Posição inicial do fundo
 
     # Carregar música de fundo
-    pygame.mixer.music.load("jogo1.mp3")
+    pygame.mixer.music.load("audios/jogo1.mp3")
     pygame.mixer.music.set_volume(0.5)  # Ajuste o volume (0.0 a 1.0)
     pygame.mixer.music.play(-1)  #-1 faz a música repetir indefinidamente
 
     #cronometro na tela 
-    font = pygame.font.Font('Android Assassin.otf', 30)
+    font = pygame.font.Font('font/Android Assassin.otf', 30)
     texto = font.render('TEMPO:', True, 'white', (0,0,0))
     posicao_texto = texto.get_rect()
     posicao_texto.center = 95, 50
@@ -35,7 +35,7 @@ def jogo1():
     tempo_segundo = 0
 
     # Personagem
-    imagem_do_personagem = pygame.image.load('akira.png')
+    imagem_do_personagem = pygame.image.load('imagens/akira.png')
     imagem_do_personagem = pygame.transform.scale(imagem_do_personagem, (100, 90)) #tamanho do personagem 
     posicao_do_personagem = imagem_do_personagem.get_rect(bottomleft=(100, ALTURA- 155)) #posicao do personagem no eixo x e y 
     gravidade = 1
@@ -44,7 +44,7 @@ def jogo1():
     no_chao = True
 
     # Obstáculos
-    imagem_do_obstaculo = pygame.image.load('vilao.png')  
+    imagem_do_obstaculo = pygame.image.load('imagens/vilao.png')  
     imagem_do_obstaculo = pygame.transform.scale(imagem_do_obstaculo, (100, 100))  #tamanho do personagem vilao 
     obstaculos = []  # Lista para armazenar os obstáculos
     velocidade_obstaculo = 8
@@ -56,7 +56,7 @@ def jogo1():
 
     #função para exibir a tela de Game Over
     def game_over():
-        fonte_game_over = pygame.font.Font('Android Assassin.otf', 60)
+        fonte_game_over = pygame.font.Font('font/Android Assassin.otf', 60)
         texto_game_over = fonte_game_over.render('GAME OVER', True, 'red', (0, 0, 0))
         tela.blit(texto, posicao_texto)
         posicao_game_over = texto_game_over.get_rect()
@@ -140,7 +140,7 @@ def jogo2():
     pygame.display.set_caption('Fallen Angels') 
 
     #fundo de tela
-    fundo=pygame.image.load('pista2.jpg')
+    fundo=pygame.image.load('imagens/pista2.jpg')
     fundo=pygame.transform.smoothscale(fundo,(1000,700))
     pista_y1 = 0  # Posição y da primeira imagem da pista
     pista_y2 = -700  # Posição y da segunda imagem da pista (logo acima da primeira)
@@ -149,7 +149,7 @@ def jogo2():
 
     #Cronometro na tela 
 
-    font= pygame.font.Font('Android Assassin.otf',30)
+    font= pygame.font.Font('font/Android Assassin.otf',30)
     texto= font.render('TEMPO:',True,'white',(0,0,0))
     posicao_texto=texto.get_rect()
     posicao_texto.center=95,50
@@ -157,7 +157,7 @@ def jogo2():
     tempo_segundo=0
 
     # Carregar música de fundo
-    pygame.mixer.music.load("jogo1.mp3")
+    pygame.mixer.music.load("audios/jogo1.mp3")
     pygame.mixer.music.set_volume(0.5)  # Ajuste o volume (0.0 a 1.0)
     pygame.mixer.music.play(-1)  #-1 faz a música repetir indefinidamente
 
@@ -177,7 +177,7 @@ def jogo2():
     posicao_x=500
     posicao_y=620
     velocidade=10
-    moto_surface=pygame.image.load('moto.png')
+    moto_surface=pygame.image.load('imagens/moto.png')
     moto_surface=pygame.transform.scale(moto_surface,(50,100)) #tamanho da moto na tela
     moto_rect = pygame.Rect(posicao_x, posicao_y, 20, 30) #ajustando o retângulo da moto
 
@@ -186,7 +186,7 @@ def jogo2():
     velocidade_carro1= -5
     posicao_y_carro1=-10
     posicao_x_carro1=gerar_posicao_aleatoaria()
-    carro1_surface=pygame.image.load('carro verde.png')
+    carro1_surface=pygame.image.load('imagens/carro verde.png')
     carro1_surface=pygame.transform.scale(carro1_surface,(90,80))
 
 
@@ -195,7 +195,7 @@ def jogo2():
     velocidade_carro2= -5 
     posicao_y_carro2= -15
     posicao_x_carro2= gerar_posicao_aleatoaria()
-    carro2_surface=pygame.image.load('carro policia.png')
+    carro2_surface=pygame.image.load('imagens/carro policia.png')
     carro2_surface=pygame.transform.scale(carro2_surface,(75,90))
 
 
@@ -204,7 +204,7 @@ def jogo2():
     velocidade_carro3= -5 
     posicao_y_carro3= -120
     posicao_x_carro3= gerar_posicao_aleatoaria()
-    carro3_surface=pygame.image.load('carro ambulancia.png')
+    carro3_surface=pygame.image.load('imagens/carro ambulancia.png')
     carro3_surface=pygame.transform.scale(carro3_surface,(60,80))
 
 
@@ -213,7 +213,7 @@ def jogo2():
     velocidade_carro4= -5 
     posicao_y_carro4= -250
     posicao_x_carro4=gerar_posicao_aleatoaria()
-    carro4_surface=pygame.image.load('carro taxi.png')
+    carro4_surface=pygame.image.load('imagens/carro taxi.png')
     carro4_surface=pygame.transform.scale(carro4_surface,(60,80))
 
 
@@ -221,7 +221,7 @@ def jogo2():
     velocidade_carro5= -5 
     posicao_y_carro5= -300
     posicao_x_carro5= gerar_posicao_aleatoaria()
-    carro5_surface=pygame.image.load('carro 5.png')
+    carro5_surface=pygame.image.load('imagens/carro 5.png')
     carro5_surface=pygame.transform.scale(carro5_surface,(58,85))
 
 
@@ -229,14 +229,14 @@ def jogo2():
     velocidade_carro6= -5 
     posicao_y_carro6= -400
     posicao_x_carro6= gerar_posicao_aleatoaria()
-    carro6_surface=pygame.image.load('carro 6.png')
+    carro6_surface=pygame.image.load('imagens/carro 6.png')
     carro6_surface=pygame.transform.scale(carro6_surface,(56,90))
 
 
 
     #função para exibir a tela de Game Over
     def game_over():
-        fonte_game_over = pygame.font.Font('Android Assassin.otf', 60)
+        fonte_game_over = pygame.font.Font('font/Android Assassin.otf', 60)
         texto_game_over = fonte_game_over.render('GAME OVER', True, 'red', (0, 0, 0))
         posicao_game_over = texto_game_over.get_rect()
         posicao_game_over.center = (500, 350)
@@ -366,7 +366,7 @@ def jogo2():
 # Configurações da tela
 LARGURA, ALTURA = 1104, 624
 tela = pygame.display.set_mode((LARGURA, ALTURA))
-pygame.display.set_caption("Menu Inicial")
+pygame.display.set_caption("Fallen Angels")
 
 # Cores
 BRANCO = (255, 255, 255)
@@ -375,14 +375,14 @@ CINZA = (100, 100, 100)
 VERMELHO = (255, 0, 0)
 
 # Fonte customizada
-fonte = pygame.font.Font('Android Assassin.otf', 50)
+fonte = pygame.font.Font('font/Android Assassin.otf', 50)
 
 # Carregar imagem de fundo
-imagem_fundo = pygame.image.load("menu.jpg")
+imagem_fundo = pygame.image.load("imagens/menu.jpg")
 imagem_fundo = pygame.transform.scale(imagem_fundo, (LARGURA, ALTURA))
 
 # Carregar música de fundo
-pygame.mixer.music.load("audiomenu.mp3")
+pygame.mixer.music.load("audios/audiomenu.mp3")
 pygame.mixer.music.set_volume(0.5)  # Ajuste o volume (0.0 a 1.0)
 pygame.mixer.music.play(-1)  #-1 faz a música repetir indefinidamente
 
