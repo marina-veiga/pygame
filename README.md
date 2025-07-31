@@ -1,4 +1,4 @@
-#Nome do Projeto: Jogo P3 - Avaliação Algoritmos I
+##Nome do Projeto: Jogo P3 - Avaliação Algoritmos I
 
 #Descrição:
    Este projeto é um jogo desenvolvido em Python usando a biblioteca Pygame para a 3ª avaliação da disciplina Algoritmos I. 
